@@ -1,5 +1,5 @@
 # Multi-OrganizationTransaction-TrackeroAuthLogin
-Here’s a **complete documentation** for your Spring Boot “MultiTransactionTracker” project including setup, Google OAuth credentials, JWT configuration, and endpoint testing.
+
 
 ---
 
@@ -32,23 +32,13 @@ cd MultiTransactionTracker
 4. Set **Authorized redirect URI**:
 
    ```
-   http://localhost:8081/login/oauth2/code/google
+http://localhost:8081/oauth2/authorization/google
    ```
 5. Copy the **Client ID** and **Client Secret**.
 
 ---
 
 ### **4. Set Environment Variables**
-
-For security, never commit your secrets to GitHub.
-
-**Linux / Mac**
-
-```bash
-export GOOGLE_CLIENT_ID=<your-client-id>
-export GOOGLE_CLIENT_SECRET=<your-client-secret>
-export JWT_SECRET=<your-256-bit-secret>
-```
 
 **Windows (CMD)**
 
@@ -57,15 +47,6 @@ set GOOGLE_CLIENT_ID=<your-client-id>
 set GOOGLE_CLIENT_SECRET=<your-client-secret>
 set JWT_SECRET=<your-256-bit-secret>
 ```
-
-**Windows (PowerShell)**
-
-```powershell
-$env:GOOGLE_CLIENT_ID="<your-client-id>"
-$env:GOOGLE_CLIENT_SECRET="<your-client-secret>"
-$env:JWT_SECRET="<your-256-bit-secret>"
-```
-
 ---
 
 ### **5. Configure application.properties**
@@ -177,3 +158,5 @@ Authorization: Bearer <JWT_TOKEN>
 If you want, I can also **create a ready Postman collection** with all endpoints and sample JSON for immediate testing.
 
 Do you want me to do that?
+
+
